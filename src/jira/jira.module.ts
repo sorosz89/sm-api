@@ -1,12 +1,12 @@
-import { HttpModule } from '@nestjs/axios';
-import { Module } from '@nestjs/common';
-import { JiraController } from './jira.controller';
-import { JiraService } from './jira.service';
-import { getAuthorization, getEnvConfig } from './utils/jira-config';
+import { HttpModule } from "@nestjs/axios";
+import { Module } from "@nestjs/common";
+import { JiraController } from "./jira.controller";
+import { JiraService } from "./jira.service";
+import { getAuthorization, getEnvConfig } from "./utils/jira-config";
 
 // Configuration for the HttpModule, including the base URL and authorization headers
 const httpConfig = {
-  baseURL: getEnvConfig('JIRA_BASE_URL'),
+  baseURL: getEnvConfig("JIRA_BASE_URL"),
   headers: {
     Authorization: getAuthorization(),
   },
