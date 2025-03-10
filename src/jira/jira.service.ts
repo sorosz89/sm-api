@@ -1,11 +1,19 @@
-import { HttpService } from '@nestjs/axios';
-import { Injectable } from '@nestjs/common';
-import { AxiosError } from 'axios';
-import { catchError, firstValueFrom } from 'rxjs';
+import { HttpService } from "@nestjs/axios";
+import { Injectable } from "@nestjs/common";
+import { AxiosError } from "axios";
+import { catchError, firstValueFrom } from "rxjs";
 
 @Injectable()
 export class JiraService {
   constructor(private readonly httpService: HttpService) {}
+
+  /**
+   * Retrieves the health of the Jira service.
+   * @returns A string indicating the health of the Jira service.
+   */
+  getHealth(): string {
+    return "OK";
+  }
 
   /**
    * Retrieves a Jira issue by its ID.

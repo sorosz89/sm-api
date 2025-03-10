@@ -1,5 +1,6 @@
-import { NestFactory } from '@nestjs/core';
-import { JiraModule } from './jira/jira.module';
+/* eslint-disable @typescript-eslint/no-floating-promises */
+import { NestFactory } from "@nestjs/core";
+import { JiraModule } from "./jira/jira.module";
 
 async function bootstrap() {
   const app = await NestFactory.create(JiraModule);

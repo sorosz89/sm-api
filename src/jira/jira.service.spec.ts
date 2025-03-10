@@ -1,9 +1,9 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { JiraService } from './jira.service';
+import { Test, TestingModule } from "@nestjs/testing";
+import { JiraService } from "./jira.service";
 // import { JiraModule } from './jira.module';
-import { HttpModule } from '@nestjs/axios';
+import { HttpModule } from "@nestjs/axios";
 
-describe('JiraService', () => {
+describe("JiraService", () => {
   let service: JiraService;
 
   beforeEach(async () => {
@@ -15,7 +15,7 @@ describe('JiraService', () => {
     service = module.get<JiraService>(JiraService);
   });
 
-  it('should be defined', () => {
+  it("should be defined", () => {
     expect(service).toBeDefined();
   });
 });
